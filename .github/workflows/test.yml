@@ -4,3 +4,6 @@ on:
   push:
     branches: [main]
 
+jobs:
+  task_1:
+  task_2:

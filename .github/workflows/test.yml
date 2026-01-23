@@ -6,4 +6,20 @@ on:
 
 jobs:
   task_1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 輸出當前路徑
+        run: echo -e "當前路徑： $(pwd)"
+      - name: 列出檔案清單
+        run: ls -la
+      - name: 查看 ubuntu-latest 預設 Node.js 版本
+        run: node -v
   task_2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 設定 Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: 檢查 Node.js 版本
+        run: node -v
